@@ -8,8 +8,7 @@
 
 //1. list book function
 class ListBooks{
-	public:
-		
+	public:	
 		void listBooks(){
 			fstream f;
 			Book b1;
@@ -199,7 +198,7 @@ class FindShelf{
 
 
 //3. Find book function
-class FindBook: public FindCat, public FindName, public FindAuthor, public FindShelf{
+class FindBook: public FindCat, private FindName, protected FindAuthor, public FindShelf{
 	public:
 //		vector<string> cat,auth;
 		void findBook(){
@@ -226,10 +225,10 @@ class FindBook: public FindCat, public FindName, public FindAuthor, public FindS
 					break;
 				}
 				case 3:{
-					cout<<"Authors:\n\n";
-					for(int i=0;i<auth.size();i++){
-						cout<<i<<") "<<auth[i]<<endl;
-					}
+//					cout<<"Authors:\n\n";
+//					for(int i=0;i<auth.size();i++){
+//						cout<<i<<") "<<auth[i]<<endl;
+//					}
 					cin.ignore(256,'\n');
 					cout<<"\nEnter the Author's name: ";
 					gets(s);
@@ -322,7 +321,7 @@ class AddNew{
 
 
 //4 Refill stock function
-class RefillStock: public AddOld, public AddNew{
+class RefillStock: protected AddOld, private AddNew{
 	public:
 		void refillStock(){
 			int x,n,id;

@@ -2,7 +2,5 @@
 
 int main(){
 	Options a;
-	a.run();
-	
+	a.run();	
 }
-
