@@ -1,2 +1,2 @@
-# oopsProject2019
-oops project
+# Book_Store_Management_System
+oops project 2019
