@@ -30,7 +30,7 @@ class SellBook{
 			cout<<"How many books you want to sell: ";
 			cin>>n;
 			for(int i=1;i<=n;i++){
-				cout<<"Enter Id of book "<<i<<": ";
+				cout<<"Enter Id of book no. "<<i<<": ";
 				cin>>id;
 				fstream f1,f2;
 				Book b1;
@@ -64,7 +64,7 @@ class SellBook{
 					i--;
 				}
 			}
-			cout<<"Total amount: "<<total<<endl;
+			cout<<"Total amount of "<<n<<" books: "<<total<<endl;
 			cout<<"GST: "<<0.12*(float)total<<endl;
 			cout<<"Total payable amount: "<<total+(0.12*(float)total)<<endl<<endl;
 		}
